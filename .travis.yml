@@ -18,7 +18,9 @@ matrix:
            PLAT=manylinux1_i686
            MANYLINUX=1
     - sudo: required
-      arch: arm64
+      arch: arm64-graviton2
+      group: edge
+      virt: lxd
       services:
         - docker
       env: DOCKER_IMAGE=quay.io/pypa/manylinux2014_aarch64
